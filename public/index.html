@@ -44,7 +44,7 @@
       }
 
       function displayMatches() {
-          const matchArray =findMatches(this.value, names);
+          const matchArray = findMatches(this.value, names);
           const html = matchArray.map(restaurants => {
             const regex = new RegExp(this.value, 'gi') ;
             const restoName = restaurants.name.replace(regex, `<span class = "h1">${this.value} </span>`);
