@@ -44,6 +44,10 @@
       }
 
       function displayMatches() {
+<<<<<<< HEAD
+=======
+          console.log(this.value);
+>>>>>>> a587371be1770270ea1538154668812d29540cbd
           const matchArray = findMatches(this.value, names);
           const html = matchArray.map(restaurants => {
             const regex = new RegExp(this.value, 'gi') ;
@@ -59,13 +63,13 @@
       
 
       const searchInput = document.querySelctor('.search');
-      const searchInput = document.querySelctor('.suggestions');
+      const suggestions = document.querySelctor('.suggestions');
 
-      searchInput.addEventListener("change", displayMatches);
-      
+      searchInput.addEventListener('change', displayMatches);
+      searchInput.addEventListener('keyup', displayMatches);
+
       <div></div>
     </script>
   </div>
-  Put your app here
 </body>
 </html>
