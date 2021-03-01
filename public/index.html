@@ -58,12 +58,13 @@
       }
       
 
-      const searchInput = document.querySelctor('.search');
-      const searchInput = document.querySelctor('.suggestions');
+      const searchInput = document.querySelector('.search');
+      const suggestions = document.querySelector('.suggestions');
 
       searchInput.addEventListener("change", displayMatches);
-      
-      <div></div>
+      searchInput.addEventListener('keyup', displayMatches);
+
+     
     </script>
   </div>
   Put your app here
