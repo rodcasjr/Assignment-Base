@@ -31,7 +31,7 @@
         "https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json";
 
       const names = [];
-
+      fetch(endpoint).then(blob => console.log(blob))
       const prom = fetch(endpoint)
         .then((blob) => blob.json())
         .then((data) => names.push(...data));
