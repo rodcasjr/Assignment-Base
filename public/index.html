@@ -1,68 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=, initial-scale=1.0" />
-    <title>Rodolfo Castro, Domenic Bongiovanni, Yared Demissie</title>
-  </head>
-  <body>
-    <header>
-      <h1>Assignment 1- Rodolfo Castro, Domenic Bongiovanni, Yared Demissie</h1>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=, initial-scale=1.0" />
+  <title>Rodolfo Castro, Domenic Bongiovanni, Yared Demissie</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h1>Assignment 1- Rodolfo Castro, Domenic Bongiovanni, Yared Demissie</h1>
+  </header>
 
 
 
-    <form class="search-form">
+  <form class="search-form">
 
-        <input type="text" class="search" placeholder="Name of Restaurant">
+      <input type="text" class="search" placeholder="Name of Restaurant">
+  
+      <ul class="suggestions">
+  
+        <li>Filter for the name of a restaurant</li>
+  
+      </ul>
+  
+    </form>
+
     
-        <ul class="suggestions">
-    
-          <li>Filter for the name of a restaurant</li>
-    
-        </ul>
-    
-      </form>
+    <script>
+      const endpoint =
+        "https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json";
 
+      const names = [];
+
+      const prom = fetch(endpoint)
+        .then((blob) => blob.json())
+        .then((data) => names.push(...data));
+
+      function findMatches(wordToMatch, names) {
+        return names.filter((restaurants) => {
+          const regex = new RegExp(wordToMatch, "gi");
+          return restaurants.name.match(regex);
+        });
+      }
+
+      function displayMatches() {
+          const matchArray =findMatches(this.value, names);
+          const html = matchArray.map(restaurants => {
+              return  `
+              <li>
+                  <span class= "title">${restaurants.name}</span> 
+              </li>
+              `;
+          }).join('');
+          suggestions.innerHTML = html;
+      }
       
-      <script>
-        const endpoint =
-          "https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json";
 
-        const names = [];
+      const searchInput = document.querySelctor('.search');
+      const searchInput = document.querySelctor('.suggestions');
 
-        const prom = fetch(endpoint)
-          .then((blob) => blob.json())
-          .then((data) => names.push(...data));
-
-        function findMatches(wordToMatch, names) {
-          return names.filter((restaurants) => {
-            const regex = new RegExp(wordToMatch, "gi");
-            return restaurants.name.match(regex);
-          });
-        }
-
-        function displayMatches() {
-            const matchArray =findMatches(this.value, names);
-            const html = matchArray.map(restaurants => {
-                return  `
-                <li>
-                    <span class= "title">${restaurants.name}</span> 
-                </li>
-                `;
-            }).join('');
-            suggestions.innerHTML = html;
-        }
-        
-
-        const searchInput = document.querySelctor('.search');
-        const searchInput = document.querySelctor('.suggestions');
-
-        searchInput.addEventListener("change", displayMatches);
-        
-        <div></div>
-      </script>
-    </div>
-    Put your app here
-  </body>
+      searchInput.addEventListener("change", displayMatches);
+      
+      <div></div>
+    </script>
+  </div>
+  Put your app here
+</body>
 </html>
