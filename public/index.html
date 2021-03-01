@@ -38,7 +38,7 @@
 
       function findMatches(wordToMatch, names) {
         return names.filter((restaurants) => {
-          const regex = new RegExp(wordToMatch, "gi");
+          const regex = new RegExp(wordToMatch, 'gi');
           return restaurants.name.match(regex);
         });
       }
