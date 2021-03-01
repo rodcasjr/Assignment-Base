@@ -44,10 +44,11 @@
       }
 
       function displayMatches() {
-          const matchArray =findMatches(this.value, names);
+          console.log(this.value);
+          const matchArray = findMatches(this.value, names);
           const html = matchArray.map(restaurants => {
             const regex = new RegExp(this.value, 'gi') ;
-            const restoName = restuarants.name.replace(regex, `<span class = "h1">${this.value} </span>`);
+            const restoName = restaurants.name.replace(regex, `<span class = "h1">${this.value} </span>`);
             return  `
               <li>
                   <span class= "title">${restaurants.name}</span> 
@@ -59,13 +60,13 @@
       
 
       const searchInput = document.querySelctor('.search');
-      const searchInput = document.querySelctor('.suggestions');
+      const suggestions = document.querySelctor('.suggestions');
 
-      searchInput.addEventListener("change", displayMatches);
-      
+      searchInput.addEventListener('change', displayMatches);
+      searchInput.addEventListener('keyup', displayMatches);
+
       <div></div>
     </script>
   </div>
-  Put your app here
 </body>
 </html>
