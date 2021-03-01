@@ -41,6 +41,18 @@
             return restaurants.name.match(regex);
           });
         }
+
+        function displayMatches() {
+            const matchArray =findMatches(this.value, names);
+            console.log(matchArray);
+        }
+
+        const searchInput = document.querySelctor('.search');
+        const searchInput = document.querySelctor('.suggestions');
+
+        searchInput.addEventListener("change", displayMatches);
+        
+        <div></div>
       </script>
     </div>
     Put your app here
