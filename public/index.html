@@ -21,7 +21,25 @@
             </li>
          </ul>
          </form>
-   
+<script>
+        const endpoint = 'https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json';
+
+        const names = [];
+
+        const prom = fetch(endpoint)
+            .then(blob => blob.json())
+            .then(data => names.push(...data))
+
+        function findMatches(wordToMatch, names) {
+            return names.filter(restaurants => {
+                return restaurants.name.match(/wordToMatch/i)
+            });
+        }
+
+
+</script>
+
+
     </div>
     Put your app here
 
