@@ -1,24 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=, initial-scale=1.0" />
     <title>Rodolfo Castro, Domenic Bongiovanni, Yared Demissie</title>
   </head>
   <body>
+
+
     <header>
-      <h1>Rodolfo Castro, Domenic Bongiovanni, Yared Demissie</h1>
+      <h1>Assignment 1- Rodolfo Castro, Domenic Bongiovanni, Yared Demissie</h1>
     </header>
-    <form action="" method="get"></form>
-    <div>
-      <form></form>
+
+
+    <div class="container">
+        <form action="/api" method = "post">
+          <ul class="flex-outer">
+            <li>
+                <input class="input" type="text" placeholder="Text input">
+            </li>
+         </ul>
+         </form>
+<script>
+        const endpoint = 'https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json';
+
+        const names = [];
+
+        const prom = fetch(endpoint)
+            .then(blob => blob.json())
+            .then(data => names.push(...data))
+
+        function findMatches(wordToMatch, names) {
+            return names.filter(restaurants => {
+                return restaurants.name.match(/wordToMatch/i)
+            });
+        }
+
+
+</script>
+
+
     </div>
     Put your app here
-
-    <div>
-
-        
-    </div>
 
   </body>
 </html>
