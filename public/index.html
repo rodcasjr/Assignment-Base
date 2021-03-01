@@ -47,12 +47,13 @@
             const html = matchArray.map(restaurants => {
                 return  `
                 <li>
-                    <span class= "title">${restaurants.name}</span>
-                    NOT SURE THIS IS DOING ANYTHING
+                    <span class= "title">${restaurants.name}</span> 
                 </li>
                 `;
-            })
+            }).join('');
+            suggestions.innerHTML = html;
         }
+        
 
         const searchInput = document.querySelctor('.search');
         const searchInput = document.querySelctor('.suggestions');
