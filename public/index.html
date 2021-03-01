@@ -44,7 +44,14 @@
 
         function displayMatches() {
             const matchArray =findMatches(this.value, names);
-            console.log(matchArray);
+            const html = matchArray.map(restaurants => {
+                return  `
+                <li>
+                    <span class= "title">${restaurants.name}</span>
+                    NOT SURE THIS IS DOING ANYTHING
+                </li>
+                `;
+            })
         }
 
         const searchInput = document.querySelctor('.search');
