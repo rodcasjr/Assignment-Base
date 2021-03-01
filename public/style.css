@@ -74,3 +74,7 @@ span.population {
 .hl {
   background: #ffc600;
 }
+
+.title {
+  text-transform: uppercase;
+}

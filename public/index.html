@@ -31,14 +31,14 @@
         "https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json";
 
       const names = [];
-
+      fetch(endpoint).then(blob => console.log(blob))
       const prom = fetch(endpoint)
         .then((blob) => blob.json())
         .then((data) => names.push(...data));
 
       function findMatches(wordToMatch, names) {
-        return names.filter((restaurants) => {
-          const regex = new RegExp(wordToMatch, "gi");
+        return names.filter(restaurants => {
+          const regex = new RegExp(wordToMatch, 'gi');
           return restaurants.name.match(regex);
         });
       }
@@ -58,7 +58,6 @@
           suggestions.innerHTML = html;
       }
       
-
       const searchInput = document.querySelector('.search');
       const suggestions = document.querySelector('.suggestions');
 
@@ -66,6 +65,6 @@
       searchInput.addEventListener('keyup', displayMatches);
 
     </script>
-  </div>
+
 </body>
 </html>
