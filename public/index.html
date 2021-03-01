@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=, initial-scale=1.0" />
+  <meta name="viewport" initial-scale=1.0" />
   <title>Rodolfo Castro, Domenic Bongiovanni, Yared Demissie</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
@@ -48,10 +48,10 @@
           const matchArray = findMatches(this.value, names);
           const html = matchArray.map(restaurants => {
             const regex = new RegExp(this.value, 'gi') ;
-            const restoName = restaurants.name.replace(regex, `<span class = "h1">${this.value} </span>`);
+            const restoName = restaurants.name.replace(regex, `<span class="hl">${this.value}</span>`);
             return  `
               <li>
-                  <span class= "title">${restaurants.name}</span> 
+                  <span class= "title">${restoName}</span> 
               </li>
               `;
           }).join('');
