@@ -76,4 +76,6 @@ span.population {
 }
 
 .title {
+  text-transform: uppercase;
 }
+
