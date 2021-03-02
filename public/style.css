@@ -30,20 +30,23 @@ input.search {
   margin: 0;
   text-align: center;
   outline: 0;
-  border: 10px solid #f7f7f7;
+  border: 0px solid #f7f7f7;
   width: 120%;
   left: -10%;
   position: relative;
   top: 10px;
   z-index: 2;
-  border-radius: 5px;
+  border-radius: 0px;
   font-size: 40px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
+  font-family: "Sigmar One", cursive;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 px rgba(0, 0, 0, 0.19);
 }
 
 .suggestions {
   margin: 10;
   padding: 10;
+  width: 118%;
+  left: -22%;
   position: relative;
   font-family: "Sigmar One", cursive;
   /*perspective: 20px;*/
@@ -56,6 +59,8 @@ input.search {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
   margin: 10;
   padding: 20px;
+  width: 110%;
+  left: 0%;
   transition: background 0.2s;
   display: flex;
   justify-content: space-between;
