@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  background: #ffc600;
+  background: #8282824c;
   font-family: "helvetica neue";
   font-size: 20px;
   font-weight: 200;
@@ -77,6 +77,4 @@ span.population {
 }
 
 .title {
-  text-transform: uppercase;
 }
-
