@@ -54,6 +54,7 @@ input.search {
   transition: background 0.2s;
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   text-transform: capitalize;
 }
 

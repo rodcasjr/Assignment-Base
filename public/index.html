@@ -51,7 +51,9 @@
             const restoName = restaurants.name.replace(regex, `<span class="hl">${this.value}</span>`);
             return  `
               <li>
-                  <span class= "title">${restoName}</span> 
+                  <span class= "title">${restoName}</span>
+                  <span class= "address">${restaurants.address_line_1}</span>
+                  <span class= "category">${restaurants.category}</span>
               </li>
               `;
           }).join('');
