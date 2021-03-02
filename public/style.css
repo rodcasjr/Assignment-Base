@@ -65,12 +65,12 @@ input.search {
 
 .suggestions li:nth-child(even) {
   margin: 10px;
-  background:linear-gradient(yellow),white)
+  background:linear-gradient(yellow,white);
 }
 
 .suggestions li:nth-child(odd) {
   margin: 10px;
-  background:linear-gradient(yellow,white)
+  background:linear-gradient(yellow,white);
 }
 
 span.population {
