@@ -1,72 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" initial-scale=1.0" />
-    <title>Rodolfo Castro, Domenic Bongiovanni, Yared Demissie</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <h1>Assignment 1- Rodolfo Castro, Domenic Bongiovanni, Yared Demissie</h1>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" initial-scale=1.0 />
+  <title>Rodolfo Castro, Domenic Bongiovanni, Yared Demissie</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h1>Assignment 1- Rodolfo Castro, Domenic Bongiovanni, Yared Demissie</h1>
+  </header>
 
-    <form class="search-form">
-      <input type="text" class="search" placeholder="Name of Restaurant" />
 
+
+  <form class="search-form">
+
+      <input type="text" class="search" placeholder="Name of Restaurant">
+  
       <ul class="suggestions">
+  
         <li>Filter for the name of a restaurant</li>
+  
       </ul>
+  
     </form>
-<<<<<<< HEAD
 
     
-    <script>
-      const endpoint =
-        "https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json";
-
-      const names = [];
-      fetch(endpoint).then(blob => console.log(blob))
-      const prom = fetch(endpoint)
-        .then((blob) => blob.json())
-        .then((data) => names.push(...data));
-
-      function findMatches(wordToMatch, names) {
-        return names.filter(restaurants => {
-          const regex = new RegExp(wordToMatch, 'gi');
-          return restaurants.name.match(regex);
-        });
-      }
-
-      function displayMatches() {
-          console.log(this.value);
-          const matchArray = findMatches(this.value, names);
-          const html = matchArray.map(restaurants => {
-            const regex = new RegExp(this.value, 'gi') ;
-            const restoName = restaurants.name.replace(regex, `<span class="hl">${this.value}</span>`);
-            return  `
-              <li>
-                  <span class= "title">${restoName}</span>
-                  <span class= "address">${restaurants.address_line_1}</span>
-                  <span class= "city">${restaurants.city}</span>
-                  <span class= "category">${restaurants.category}</span>
-              </li>
-              `;
-          }).join('');
-          suggestions.innerHTML = html;
-      }
-      
-      const searchInput = document.querySelector('.search');
-      const suggestions = document.querySelector('.suggestions');
-
-      searchInput.addEventListener('change', displayMatches);
-      searchInput.addEventListener('keyup', displayMatches);
-
-    </script>
+   
 
 </body>
-=======
-    <script src="script.js"></script>
-  </body>
->>>>>>> e64e1461529fc36c35b071c0ebe19ba693f5c3a3
 </html>
