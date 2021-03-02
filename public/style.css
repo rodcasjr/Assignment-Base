@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  background: #8282824c;
+  background: #b2eddc;
   font-family: "helvetica neue";
   font-size: 20px;
   font-weight: 200;
@@ -45,7 +45,7 @@ input.search {
   margin: 0;
   padding: 0;
   position: relative;
-  font-family: 'Sigmar One', cursive;
+  font-family: "Sigmar One", cursive;
   /*perspective: 20px;*/
 }
 
@@ -84,4 +84,3 @@ span.population {
 .title {
   text-transform: uppercase;
 }
-
