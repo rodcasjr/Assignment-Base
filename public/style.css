@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  background: #8282824c;
+  background: #b2eddc;
   font-family: "helvetica neue";
   font-size: 20px;
   font-weight: 200;
@@ -45,12 +45,12 @@ input.search {
   margin: 10;
   padding: 10;
   position: relative;
-  font-family: 'Sigmar One', cursive;
+  font-family: "Sigmar One", cursive;
   /*perspective: 20px;*/
 }
 
 .suggestions li {
-  background: white;
+  background: #f0e169;
   list-style: none;
   border-bottom: 1px solid #d8d8d8;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
@@ -85,4 +85,3 @@ span.population {
   text-transform: uppercase;
   font-weight: 500;
 }
-
