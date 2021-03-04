@@ -2,9 +2,12 @@ async function windowActions() {
     // console.log('window loaded');
     const form = document.querySelector('.search-form');
     const search = document.querySelector('#name');
+    const suggestions = document.querySelector('.suggestions');
 
     const request = await fetch('/api');
     const data = await request.json();
+
+    const appendBox = document.createElement
   
     form.addEventListener('submit', async (event) => {
         event.preventDefault();
